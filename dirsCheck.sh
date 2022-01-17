@@ -2,7 +2,7 @@
 dir_path=$1
 echo $dir_path
 
-function check_for_dublicates {
+function transform_to_lowercase {
     if [ -e "$dir_path" ]
     then
         for file in "$dir_path"/*
@@ -16,4 +16,4 @@ function check_for_dublicates {
 
 }
 
-check_for_dublicates
+transform_to_lowercase

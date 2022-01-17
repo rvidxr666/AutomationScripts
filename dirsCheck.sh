@@ -9,11 +9,9 @@ function transform_to_lowercase {
         do 
             mv -vf "$file" "`echo $file | tr '[A-Z]' '[a-z]'`"
         done 
-
     else
         echo "Path doesn't exist"
     fi
-
 }
 
 transform_to_lowercase

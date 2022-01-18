@@ -15,6 +15,9 @@ then
     git add -A
     git commit -m "$message"
     git push $(git remote) $(git branch | sed -n '/\* /s///p')  
-else 
-    echo "Some of the arguments weren't specified"
+else
+    cd "$path" 
+    git add "$name"
+    git commit -m "$message" "$name"
+    git push $(git remote) $(git branch | sed -n '/\* /s///p')
 fi
